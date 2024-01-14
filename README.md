@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -15,6 +15,7 @@
     #timer {
       font-size: 2em;
       margin-bottom: 20px;
+      outline: 2px solid black; /* Black outline for better visibility */
     }
 
     #progress-bar {
@@ -49,6 +50,7 @@
       margin: 4px 2px;
       cursor: pointer;
       border-radius: 5px;
+      outline: 2px solid black; /* Black outline for better visibility */
     }
 
     button:hover {
@@ -74,6 +76,7 @@
       border: none;
       border-radius: 5px;
       margin-right: 10px;
+      outline: 2px solid black; /* Black outline for better visibility */
     }
 
     #add-task-btn {
@@ -83,6 +86,21 @@
       padding: 8px 15px;
       border-radius: 5px;
       cursor: pointer;
+      outline: 2px solid black; /* Black outline for better visibility */
+    }
+
+    #tasks {
+      list-style-type: none;
+      padding: 0;
+      outline: 2px solid black; /* Black outline for better visibility */
+    }
+
+    .color-dropdown {
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      outline: 2px solid black; /* Black outline for better visibility */
     }
 
     .color-option {
@@ -91,12 +109,11 @@
       height: 20px;
       margin: 0 5px;
       cursor: pointer;
+      outline: 2px solid black; /* Black outline for better visibility */
     }
   </style>
 </head>
 <body>
-
-  <h1>Study Timer</h1>
 
   <div id="timer">25:00</div>
 
@@ -118,6 +135,11 @@
 
   <div>
     <h2>Background Color Options</h2>
+    <select id="colorDropdown" class="color-dropdown" onchange="changeBackgroundColor(this.value)">
+      <option value="#333">Dark</option>
+      <option value="#555">Medium</option>
+      <option value="#1e3943">Custom</option>
+    </select>
     <div class="color-option" onclick="changeBackgroundColor('#333')"></div>
     <div class="color-option" onclick="changeBackgroundColor('#555')"></div>
     <div class="color-option" onclick="changeBackgroundColor('#1e3943')"></div>
@@ -180,3 +202,4 @@
 
 </body>
 </html>
+
