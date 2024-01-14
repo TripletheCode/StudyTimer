@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,7 +21,6 @@
     #progress-bar {
       width: 300px;
       height: 20px;
-      background-color: #555;
       margin: 0 auto;
       overflow: hidden;
       border-radius: 10px;
@@ -28,7 +28,6 @@
 
     #progress {
       height: 100%;
-      background-color: #4CAF50;
       border-radius: 10px;
       transition: width 0.5s;
     }
@@ -38,8 +37,6 @@
     }
 
     button {
-      background-color: #4CAF50;
-      color: white;
       border: none;
       padding: 10px 20px;
       text-align: center;
@@ -49,6 +46,11 @@
       margin: 4px 2px;
       cursor: pointer;
       border-radius: 5px;
+    }
+
+    #clearTasksBtn {
+      background-color: #f44336; /* Red for visibility on dark backgrounds */
+      color: white;
     }
 
     button:hover {
@@ -79,9 +81,6 @@
     #add-task-btn {
       background-color: #4CAF50;
       color: white;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 5px;
       cursor: pointer;
     }
 
@@ -96,11 +95,15 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
+    #time-input {
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
-
-  <h1>Study Timer</h1>
 
   <div id="timer">25:00</div>
 
@@ -117,12 +120,13 @@
     <h2>Task List</h2>
     <input type="text" id="task-input" placeholder="Add a task">
     <button onclick="addTask()" id="add-task-btn">Add</button>
+    <button onclick="clearTasks()" id="clearTasksBtn">Clear Tasks</button>
     <ul id="tasks"></ul>
   </div>
 
   <div>
     <h2>Background Color Options</h2>
-    <select id="colorDropdown" onchange="changeBackgroundColor(this.value)">
+    <select id="colorDropdown" onchange="changeTheme(this.value)">
       <option value="#001f3f">Dark Blue</option>
       <option value="#555555">Gray</option>
       <option value="#0074cc">Blue</option>
@@ -134,9 +138,15 @@
     </select>
   </div>
 
+  <div>
+    <h2>Change Timer Duration (minutes)</h2>
+    <input type="number" id="time-input" min="1" value="25">
+    <button onclick="changeTimerDuration()">Set Timer</button>
+  </div>
+
   <script>
     let timer;
-    let timeLeft = 1500; // 25 minutes in seconds
+    let timeLeft = 1500; // Default timer duration is 25 minutes
 
     function startTimer() {
       // Disable the start button to prevent multiple clicks
@@ -184,9 +194,38 @@
       }
     }
 
-    function changeBackgroundColor(color) {
+    function clearTasks() {
+      const tasksList = document.getElementById('tasks');
+      tasksList.innerHTML = '';
+    }
+
+    function changeTimerDuration() {
+      const timeInput = document.getElementById('time-input');
+      const newDuration = parseInt(timeInput.value, 10) * 60;
+      timeLeft = newDuration;
+      stopTimer();
+      updateTimer();
+    }
+
+    function changeTheme(color) {
       document.body.style.backgroundColor = color;
+      document.getElementById('timer').style.color = getContrastColor(color);
+      document.getElementById('progress').style.backgroundColor = getContrastColor(color);
+      document.getElementById('startButton').style.backgroundColor = getContrastColor(color);
+      document.getElementById('add-task-btn').style.backgroundColor = getContrastColor(color);
+      document.getElementById('clearTasksBtn').style.backgroundColor = getContrastColor(color);
+    }
+
+    function getContrastColor(hexColor) {
+      // Function to get contrasting text color based on background color
+      const r = parseInt(hexColor.slice(1, 3), 16);
+      const g = parseInt(hexColor.slice(3, 5), 16);
+      const b = parseInt(hexColor.slice(5, 7), 16);
+      const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+      return (yiq >= 128) ? '#000000' : '#ffffff';
     }
   </script>
+
+</body>
 </html>
 
