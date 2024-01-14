@@ -9,7 +9,7 @@
       text-align: center;
       margin: 50px;
       color: white;
-      background-color: #001f3f; /* Dark blue background color */
+      background-color: #FF6347; /* Tomato background color */
     }
 
     h1 {
