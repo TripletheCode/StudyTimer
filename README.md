@@ -2,19 +2,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Timer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
       margin: 50px;
       color: white;
       background-color: #001f3f; /* Default dark blue background color */
     }
 
-    #timer {
-      font-size: 2em;
+    h1 {
+      font-size: 2.5em;
       margin-bottom: 20px;
+    }
+
+    #timer {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #3498db; /* Blue text color for the timer */
     }
 
     #progress-bar {
@@ -23,12 +28,14 @@
       margin: 0 auto;
       overflow: hidden;
       border-radius: 10px;
+      background-color: #34495e; /* Darker blue for the progress bar container */
     }
 
     #progress {
       height: 100%;
       border-radius: 10px;
       transition: width 0.5s;
+      background-color: #2ecc71; /* Green for the progress bar */
     }
 
     #controls {
@@ -45,22 +52,20 @@
       margin: 4px 2px;
       cursor: pointer;
       border-radius: 5px;
+      color: white;
     }
 
     #clearTasksBtn {
       cursor: pointer;
-    }
-
-    #clearTasksBtn:hover {
-      background-color: #f44336; /* Red for visibility on dark backgrounds */
+      background-color: #e74c3c; /* Red for the clear tasks button */
     }
 
     button:hover {
-      background-color: #45a049;
+      background-color: #2ecc71; /* Green for button hover effect */
     }
 
     button:disabled {
-      background-color: #aaa;
+      background-color: #95a5a6; /* Gray for disabled button */
       cursor: not-allowed;
     }
 
@@ -82,10 +87,11 @@
 
     #add-task-btn {
       cursor: pointer;
+      background-color: #3498db; /* Blue for the add task button */
     }
 
     #add-task-btn:hover {
-      background-color: #4CAF50;
+      background-color: #2980b9; /* Darker blue for button hover effect */
     }
 
     #tasks {
@@ -98,18 +104,18 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      background-color: #3498db; /* Blue for the color dropdown */
     }
 
     #time-input {
       padding: 8px;
       border: none;
       border-radius: 5px;
+      background-color: #ecf0f1; /* Light gray for the timer input background */
     }
   </style>
 </head>
 <body>
-
-  <h1>Study Timer</h1>
 
   <div>
     <h2>Change Timer Duration (minutes)</h2>
@@ -219,10 +225,7 @@
       document.body.style.backgroundColor = color;
     }
   </script>
-
 </body>
 </html>
 
-</body>
-</html>
 
