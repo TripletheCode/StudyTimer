@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -121,6 +121,7 @@
 </head>
 <body>
 
+  <h1>Study Timer</h1>
 
   <div>
     <h2>Change Timer Duration (minutes)</h2>
@@ -233,6 +234,3 @@
 
 </body>
 </html>
-
-
-
