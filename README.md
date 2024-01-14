@@ -9,8 +9,8 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
       margin: 50px;
-      color: black;
-      background-color: #001f3f; /* Default dark blue background color */
+      color: white;
+      background-color: #001f3f; /* Dark blue background color */
     }
 
     h1 {
@@ -54,21 +54,22 @@
       margin: 4px 2px;
       cursor: pointer;
       border-radius: 5px;
-      color: black;
-      background-color: #001f3f; /* Dark blue for button background color */
+      color: white;
+      background-color: #333; /* Dark gray for button background color */
     }
 
     #clearTasksBtn {
       cursor: pointer;
-      background-color: #333; /* Dark gray for the clear tasks button */
+      background-color: black; /* Black for the clear tasks button */
+      color: white; /* White text color for the clear tasks button */
     }
 
     button:hover {
-      background-color: #ddd; /* Light gray for button hover effect */
+      background-color: #555; /* Darker gray for button hover effect */
     }
 
     button:disabled {
-      background-color: #ccc; /* Gray for disabled button */
+      background-color: #95a5a6; /* Gray for disabled button */
       cursor: not-allowed;
     }
 
@@ -90,11 +91,11 @@
 
     #add-task-btn {
       cursor: pointer;
-      background-color: #001f3f; /* Dark blue for the add task button */
+      background-color: #333; /* Dark gray for the add task button */
     }
 
     #add-task-btn:hover {
-      background-color: #555; /* Dark gray for button hover effect */
+      background-color: #555; /* Darker gray for button hover effect */
     }
 
     #tasks {
@@ -107,14 +108,15 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      background-color: #001f3f; /* Dark blue for the color dropdown */
+      background-color: white; /* White for the color dropdown */
+      color: black; /* Black text color for the color dropdown */
     }
 
     #time-input {
       padding: 8px;
       border: none;
       border-radius: 5px;
-      background-color: #eee; /* Very light gray for the timer input background */
+      background-color: #eee; /* Light gray for the timer input background */
       color: #333; /* Dark gray text color for the timer input */
     }
   </style>
@@ -151,7 +153,7 @@
     <h2>Background Color Options</h2>
     <select id="colorDropdown" onchange="changeTheme(this.value)">
       <option value="#001f3f">Dark Blue</option>
-      <option value="#555555">Gray</option>
+      <option value="#800000">Maroon</option>
       <option value="#0074cc">Blue</option>
       <option value="#34a853">Green</option>
       <option value="#ea4335">Red</option>
@@ -230,5 +232,6 @@
       document.body.style.backgroundColor = color;
     }
   </script>
+
 
 
