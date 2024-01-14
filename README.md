@@ -1,7 +1,9 @@
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Timer</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -53,6 +55,7 @@
       cursor: pointer;
       border-radius: 5px;
       color: white;
+      background-color: #3498db; /* Blue for button background color */
     }
 
     #clearTasksBtn {
@@ -112,10 +115,12 @@
       border: none;
       border-radius: 5px;
       background-color: #ecf0f1; /* Light gray for the timer input background */
+      color: #2c3e50; /* Dark gray text color for the timer input */
     }
   </style>
 </head>
 <body>
+
 
   <div>
     <h2>Change Timer Duration (minutes)</h2>
@@ -225,7 +230,9 @@
       document.body.style.backgroundColor = color;
     }
   </script>
+
 </body>
 </html>
+
 
 
