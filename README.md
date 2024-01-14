@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -112,6 +111,12 @@
 
   <h1>Study Timer</h1>
 
+  <div>
+    <h2>Change Timer Duration (minutes)</h2>
+    <input type="number" id="time-input" min="1" value="25">
+    <button onclick="changeTimerDuration()">Set Timer</button>
+  </div>
+
   <div id="timer">25:00</div>
 
   <div id="progress-bar">
@@ -142,13 +147,9 @@
       <option value="#673ab7">Purple</option>
       <option value="#ff9800">Orange</option>
       <option value="#e91e63">Pink</option>
+      <option value="#2196f3">Royal Blue</option>
+      <option value="#ff5722">Deep Orange</option>
     </select>
-  </div>
-
-  <div>
-    <h2>Change Timer Duration (minutes)</h2>
-    <input type="number" id="time-input" min="1" value="25">
-    <button onclick="changeTimerDuration()">Set Timer</button>
   </div>
 
   <script>
@@ -216,22 +217,11 @@
 
     function changeTheme(color) {
       document.body.style.backgroundColor = color;
-      document.getElementById('timer').style.color = getContrastColor(color);
-      document.getElementById('progress').style.backgroundColor = getContrastColor(color);
-      document.getElementById('startButton').style.backgroundColor = getContrastColor(color);
-      document.getElementById('add-task-btn').style.backgroundColor = getContrastColor(color);
-      document.getElementById('clearTasksBtn').style.backgroundColor = getContrastColor(color);
-    }
-
-    function getContrastColor(hexColor) {
-      // Function to get contrasting text color based on background color
-      const r = parseInt(hexColor.slice(1, 3), 16);
-      const g = parseInt(hexColor.slice(3, 5), 16);
-      const b = parseInt(hexColor.slice(5, 7), 16);
-      const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
-      return (yiq >= 128) ? '#000000' : '#ffffff';
     }
   </script>
+
+</body>
+</html>
 
 </body>
 </html>
