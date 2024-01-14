@@ -58,8 +58,6 @@
 </head>
 <body>
 
-  <h1>Study Timer</h1>
-
   <div id="timer">25:00</div>
 
   <div id="progress-bar">
