@@ -8,14 +8,13 @@
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 50px;
-      color: black; /* Default text color */
-      background-color: #f0f0f0; /* Default background color */
+      color: white;
+      background-color: #001f3f; /* Default dark blue background color */
     }
 
     #timer {
       font-size: 2em;
       margin-bottom: 20px;
-      outline: 2px solid black; /* Black outline for better visibility */
     }
 
     #progress-bar {
@@ -50,7 +49,6 @@
       margin: 4px 2px;
       cursor: pointer;
       border-radius: 5px;
-      outline: 2px solid black; /* Black outline for better visibility */
     }
 
     button:hover {
@@ -76,7 +74,6 @@
       border: none;
       border-radius: 5px;
       margin-right: 10px;
-      outline: 2px solid black; /* Black outline for better visibility */
     }
 
     #add-task-btn {
@@ -86,13 +83,18 @@
       padding: 8px 15px;
       border-radius: 5px;
       cursor: pointer;
-      outline: 2px solid black; /* Black outline for better visibility */
     }
 
     #tasks {
       list-style-type: none;
       padding: 0;
-      outline: 2px solid black; /* Black outline for better visibility */
+    }
+
+    #colorDropdown {
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -116,6 +118,20 @@
     <input type="text" id="task-input" placeholder="Add a task">
     <button onclick="addTask()" id="add-task-btn">Add</button>
     <ul id="tasks"></ul>
+  </div>
+
+  <div>
+    <h2>Background Color Options</h2>
+    <select id="colorDropdown" onchange="changeBackgroundColor(this.value)">
+      <option value="#001f3f">Dark Blue</option>
+      <option value="#555555">Gray</option>
+      <option value="#0074cc">Blue</option>
+      <option value="#34a853">Green</option>
+      <option value="#ea4335">Red</option>
+      <option value="#673ab7">Purple</option>
+      <option value="#ff9800">Orange</option>
+      <option value="#e91e63">Pink</option>
+    </select>
   </div>
 
   <script>
@@ -167,11 +183,10 @@
         taskInput.value = '';
       }
     }
+
+    function changeBackgroundColor(color) {
+      document.body.style.backgroundColor = color;
+    }
   </script>
-
-</body>
-</html>
-
-</body>
 </html>
 
