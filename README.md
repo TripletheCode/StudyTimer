@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -49,8 +49,11 @@
     }
 
     #clearTasksBtn {
+      cursor: pointer;
+    }
+
+    #clearTasksBtn:hover {
       background-color: #f44336; /* Red for visibility on dark backgrounds */
-      color: white;
     }
 
     button:hover {
@@ -79,9 +82,11 @@
     }
 
     #add-task-btn {
-      background-color: #4CAF50;
-      color: white;
       cursor: pointer;
+    }
+
+    #add-task-btn:hover {
+      background-color: #4CAF50;
     }
 
     #tasks {
@@ -104,6 +109,8 @@
   </style>
 </head>
 <body>
+
+  <h1>Study Timer</h1>
 
   <div id="timer">25:00</div>
 
