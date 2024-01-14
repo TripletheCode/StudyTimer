@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -123,6 +122,8 @@
 </head>
 <body>
 
+
+
   <div>
     <h2>Change Timer Duration (minutes)</h2>
     <input type="number" id="time-input" min="1" value="25">
@@ -151,16 +152,22 @@
   <div>
     <h2>Background Color Options</h2>
     <select id="colorDropdown" onchange="changeTheme(this.value)">
-      <option value="#001f3f">Dark Blue</option>
-      <option value="#800000">Maroon</option>
-      <option value="#0074cc">Blue</option>
-      <option value="#34a853">Green</option>
-      <option value="#ea4335">Red</option>
-      <option value="#673ab7">Purple</option>
-      <option value="#ff9800">Orange</option>
-      <option value="#e91e63">Pink</option>
-      <option value="#2196f3">Royal Blue</option>
-      <option value="#ff5722">Deep Orange</option>
+      <option value="#FF6347">Tomato</option>
+      <option value="#32CD32">Lime Green</option>
+      <option value="#4682B4">Steel Blue</option>
+      <option value="#FF8C00">Dark Orange</option>
+      <option value="#8A2BE2">Blue Violet</option>
+      <option value="#00CED1">Dark Turquoise</option>
+      <option value="#FFD700">Gold</option>
+      <option value="#4B0082">Indigo</option>
+      <option value="#8B4513">Saddle Brown</option>
+      <option value="#008080">Teal</option>
+      <option value="#FF1493">Deep Pink</option>
+      <option value="#2F4F4F">Dark Slate Gray</option>
+      <option value="#BDB76B">Dark Khaki</option>
+      <option value="#FF4500">Orange Red</option>
+      <option value="#6A5ACD">Slate Blue</option>
+      <option value="#20B2AA">Light Sea Green</option>
     </select>
   </div>
 
@@ -231,9 +238,4 @@
       document.body.style.backgroundColor = color;
     }
   </script>
-
-</body>
-</html>
-
-
 
