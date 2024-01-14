@@ -9,6 +9,7 @@
       text-align: center;
       margin: 50px;
       color: black; /* Default text color */
+      background-color: #f0f0f0; /* Default background color */
     }
 
     #timer {
@@ -93,23 +94,6 @@
       padding: 0;
       outline: 2px solid black; /* Black outline for better visibility */
     }
-
-    .color-dropdown {
-      padding: 8px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      outline: 2px solid black; /* Black outline for better visibility */
-    }
-
-    .color-option {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      margin: 0 5px;
-      cursor: pointer;
-      outline: 2px solid black; /* Black outline for better visibility */
-    }
   </style>
 </head>
 <body>
@@ -132,22 +116,6 @@
     <input type="text" id="task-input" placeholder="Add a task">
     <button onclick="addTask()" id="add-task-btn">Add</button>
     <ul id="tasks"></ul>
-  </div>
-
-  <div>
-    <h2>Background Color Options</h2>
-    <select id="colorDropdown" class="color-dropdown" onchange="changeBackgroundColor(this.value)">
-      <option value="#333">Dark</option>
-      <option value="#555">Medium</option>
-      <option value="#1e3943">Custom</option>
-      <option value="#800000">Red</option>
-      <option value="#008000">Green</option>
-    </select>
-    <div class="color-option" onclick="changeBackgroundColor('#333')"></div>
-    <div class="color-option" onclick="changeBackgroundColor('#555')"></div>
-    <div class="color-option" onclick="changeBackgroundColor('#1e3943')"></div>
-    <div class="color-option" onclick="changeBackgroundColor('#800000')"></div>
-    <div class="color-option" onclick="changeBackgroundColor('#008000')"></div>
   </div>
 
   <script>
@@ -198,10 +166,6 @@
         tasksList.appendChild(newTask);
         taskInput.value = '';
       }
-    }
-
-    function changeBackgroundColor(color) {
-      document.body.style.backgroundColor = color;
     }
   </script>
 
