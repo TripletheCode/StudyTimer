@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,7 +10,7 @@
       text-align: center;
       margin: 50px;
       color: black;
-      background-color: #f5f5f5; /* Default light gray background color */
+      background-color: #001f3f; /* Default dark blue background color */
     }
 
     h1 {
@@ -55,7 +55,7 @@
       cursor: pointer;
       border-radius: 5px;
       color: black;
-      background-color: #f5f5f5; /* Light gray for button background color */
+      background-color: #001f3f; /* Dark blue for button background color */
     }
 
     #clearTasksBtn {
@@ -90,11 +90,11 @@
 
     #add-task-btn {
       cursor: pointer;
-      background-color: #f5f5f5; /* Light gray for the add task button */
+      background-color: #001f3f; /* Dark blue for the add task button */
     }
 
     #add-task-btn:hover {
-      background-color: #ddd; /* Dark gray for button hover effect */
+      background-color: #555; /* Dark gray for button hover effect */
     }
 
     #tasks {
@@ -107,7 +107,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      background-color: #f5f5f5; /* Light gray for the color dropdown */
+      background-color: #001f3f; /* Dark blue for the color dropdown */
     }
 
     #time-input {
@@ -121,7 +121,6 @@
 </head>
 <body>
 
-  <h1>Study Timer</h1>
 
   <div>
     <h2>Change Timer Duration (minutes)</h2>
@@ -151,7 +150,7 @@
   <div>
     <h2>Background Color Options</h2>
     <select id="colorDropdown" onchange="changeTheme(this.value)">
-      <option value="#f5f5f5">Light Gray</option>
+      <option value="#001f3f">Dark Blue</option>
       <option value="#555555">Gray</option>
       <option value="#0074cc">Blue</option>
       <option value="#34a853">Green</option>
@@ -231,8 +230,5 @@
       document.body.style.backgroundColor = color;
     }
   </script>
-
-</body>
-</html>
 
 
