@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,7 +8,7 @@
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 50px;
-      color: white;
+      color: black; /* Default text color */
     }
 
     #timer {
@@ -115,6 +114,8 @@
 </head>
 <body>
 
+  <h1>Study Timer</h1>
+
   <div id="timer">25:00</div>
 
   <div id="progress-bar">
@@ -139,10 +140,14 @@
       <option value="#333">Dark</option>
       <option value="#555">Medium</option>
       <option value="#1e3943">Custom</option>
+      <option value="#800000">Red</option>
+      <option value="#008000">Green</option>
     </select>
     <div class="color-option" onclick="changeBackgroundColor('#333')"></div>
     <div class="color-option" onclick="changeBackgroundColor('#555')"></div>
     <div class="color-option" onclick="changeBackgroundColor('#1e3943')"></div>
+    <div class="color-option" onclick="changeBackgroundColor('#800000')"></div>
+    <div class="color-option" onclick="changeBackgroundColor('#008000')"></div>
   </div>
 
   <script>
@@ -199,6 +204,9 @@
       document.body.style.backgroundColor = color;
     }
   </script>
+
+</body>
+</html>
 
 </body>
 </html>
