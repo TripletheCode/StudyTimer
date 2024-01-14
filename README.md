@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +9,6 @@
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 50px;
-      background-color: #333;
       color: white;
     }
 
@@ -59,11 +59,44 @@
       background-color: #aaa;
       cursor: not-allowed;
     }
+
+    #task-list {
+      text-align: left;
+      margin-top: 20px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #task-input {
+      width: 70%;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    #add-task-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .color-option {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
-
+  <h1>Study Timer</h1>
 
   <div id="timer">25:00</div>
 
@@ -74,6 +107,20 @@
   <div id="controls">
     <button onclick="startTimer()" id="startButton">Start</button>
     <button onclick="stopTimer()">Stop</button>
+  </div>
+
+  <div id="task-list">
+    <h2>Task List</h2>
+    <input type="text" id="task-input" placeholder="Add a task">
+    <button onclick="addTask()" id="add-task-btn">Add</button>
+    <ul id="tasks"></ul>
+  </div>
+
+  <div>
+    <h2>Background Color Options</h2>
+    <div class="color-option" onclick="changeBackgroundColor('#333')"></div>
+    <div class="color-option" onclick="changeBackgroundColor('#555')"></div>
+    <div class="color-option" onclick="changeBackgroundColor('#1e3943')"></div>
   </div>
 
   <script>
@@ -112,7 +159,24 @@
         timeLeft--;
       }
     }
+
+    function addTask() {
+      const taskInput = document.getElementById('task-input');
+      const taskText = taskInput.value.trim();
+
+      if (taskText !== '') {
+        const tasksList = document.getElementById('tasks');
+        const newTask = document.createElement('li');
+        newTask.textContent = taskText;
+        tasksList.appendChild(newTask);
+        taskInput.value = '';
+      }
+    }
+
+    function changeBackgroundColor(color) {
+      document.body.style.backgroundColor = color;
+    }
   </script>
 
 </body>
-
+</html>
