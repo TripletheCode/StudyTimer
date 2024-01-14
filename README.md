@@ -1,8 +1,8 @@
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Timer</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -54,9 +54,16 @@
     button:hover {
       background-color: #45a049;
     }
+
+    button:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
   </style>
 </head>
 <body>
+
+  <h1>Study Timer</h1>
 
   <div id="timer">25:00</div>
 
@@ -65,7 +72,7 @@
   </div>
 
   <div id="controls">
-    <button onclick="startTimer()">Start</button>
+    <button onclick="startTimer()" id="startButton">Start</button>
     <button onclick="stopTimer()">Stop</button>
   </div>
 
@@ -74,11 +81,16 @@
     let timeLeft = 1500; // 25 minutes in seconds
 
     function startTimer() {
+      // Disable the start button to prevent multiple clicks
+      document.getElementById('startButton').disabled = true;
+
       timer = setInterval(updateTimer, 1000);
     }
 
     function stopTimer() {
       clearInterval(timer);
+      // Enable the start button when stopping the timer
+      document.getElementById('startButton').disabled = false;
     }
 
     function updateTimer() {
@@ -94,6 +106,8 @@
       if (timeLeft === 0) {
         clearInterval(timer);
         alert('Time is up! Take a break.');
+        // Enable the start button after the timer reaches zero
+        document.getElementById('startButton').disabled = false;
       } else {
         timeLeft--;
       }
@@ -101,4 +115,4 @@
   </script>
 
 </body>
-</html>
+</html
