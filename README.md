@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -21,7 +21,7 @@
     #timer {
       font-size: 3em;
       margin-bottom: 20px;
-      color: #333; /* Dark gray text color for the timer */
+      color: black; /* Black text color for the timer */
     }
 
     #progress-bar {
@@ -37,7 +37,7 @@
       height: 100%;
       border-radius: 10px;
       transition: width 0.5s;
-      background-color: #555; /* Dark gray for the progress bar */
+      background-color: black; /* Black for the progress bar */
     }
 
     #controls {
@@ -55,7 +55,7 @@
       cursor: pointer;
       border-radius: 5px;
       color: white;
-      background-color: #333; /* Dark gray for button background color */
+      background-color: black; /* Black for button background color */
     }
 
     #clearTasksBtn {
@@ -91,7 +91,7 @@
 
     #add-task-btn {
       cursor: pointer;
-      background-color: #333; /* Dark gray for the add task button */
+      background-color: black; /* Black for the add task button */
     }
 
     #add-task-btn:hover {
@@ -123,6 +123,7 @@
 </head>
 <body>
 
+  <h1>Study Timer</h1>
 
   <div>
     <h2>Change Timer Duration (minutes)</h2>
@@ -232,6 +233,9 @@
       document.body.style.backgroundColor = color;
     }
   </script>
+
+</body>
+</html>
 
 
 
